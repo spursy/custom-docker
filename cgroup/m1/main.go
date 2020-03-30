@@ -13,6 +13,7 @@ import (
 func main() {
 	// 挂载了 memory subsystem的hierarchy的根目录位置
 	const cgroupMemoryHierarchyMount = "/sys/fs/cgroup/memroy"
+	fmt.Printf(`os args %v`, os.Args)
 	if os.Args[0] == "/proc/self/exe" {
 		// 容器进程
 		fmt.Printf("current pid %d", syscall.Getpid())
